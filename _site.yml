@@ -7,7 +7,7 @@ navbar:
       href: experience.html
     - text: "Plotly"
       href: plotly.html
-      text: "Dashboard"
+    - text: "Dashboard"
       href: Dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<ms6358@cumc.columibia.edu>
