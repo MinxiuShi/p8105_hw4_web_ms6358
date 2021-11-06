@@ -9,7 +9,7 @@ output:
 ## Dataset
 
 ```{r}
-library(tidyverse)
+library(flexdashboard)
 library(p8105.datasets)
 
 library(plotly)
