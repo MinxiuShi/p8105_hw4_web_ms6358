@@ -1,0 +1,65 @@
+---
+title: "Experience"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+## Here is my professional experiece!
+1.
+  ByteDance Corporation, Beijing, China
+  Intern in Global Payment Analysis and Motivation Group
+  October 2020-Januanry 2021
+
+
+  Recorded competitors’ compensation, including Tencent, in autumn recruitment from the Internet or HRBP
+  Designed questionnaires to enquire newly recruited employees about competitor compensation and used Excel to compare them
+  Used Python to produce statistical distributions
+
+2.
+  Statistics Bureau 
+  April 2020-May 2020
+  Data Analyst Assistant in the General Department
+
+
+  Obtained quarterly data on GDP, gross industrial output and gross agricultural output from every district
+  Used Excel to categorize and summarize data respectively and collectively; calculated the added value
+  Used STATA to sift and compare the data respectively and collectively based on districts; produced relevant graphs
+
+## Here is the academic experience!
+
+1.
+  Problems and Advice in Domestic Government Procurement for Poverty Alleviation
+  November 2019-December 2019
+
+  Documented the location of corporations winning bids from relevant websites
+  Used Eviews to separate them as local or external corporations and devise a mathematical model
+  Used STATA to analyze whether locations would sway the probability of winning a bid
+
+2.
+  Essay on Game Theory and Information Economics, Central University of Finance and Economics
+  May 2019-June 2019
+  Should Abortion be Legal?———Analyzing Game Theory in Abortion
+
+  Calculated the crime rate, the number of criminals and their family background on a yearly basis
+  Considered whether criminals’ mothers had been under the pressure of abortion prohibition as the variation
+  Used STATA and SPSS to analyze whether legal abortion could decrease crime rates
+
+3.
+   The Impact of China’s One-Child Policy on Induced Abortion, General Projects of National Social Science Fund
+  May 2018-Octobor 2018 
+
+  Helped design relevant questionnaires and conduct questionnaires surveys
+  Used Excel to classify data according to age and district, and made graphics
+  Used Python and STATA to assess whether the policy boosted induced abortion
+
+4.
+  Undergraduate Innovation and Entrepreneurship Competition, Beijing Municipal Award
+  “YI·party”College Student Team Activities Service Platform
+
+
+  Acquired data on college students’ team activities experience via questionnaires and made graphs
+  Used regression analysis by Excel and took game satisfaction and environment as variations
+  Analyzed according to the results whether the variations would affect the experience of team activities
