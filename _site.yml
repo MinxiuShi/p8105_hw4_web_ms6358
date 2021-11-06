@@ -1,0 +1,18 @@
+name: "My internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Experience"
+      href: experience.html
+    - text: "Plotly"
+      href: plotly.html
+      text: "Dashboard"
+      href: Dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<ms6358@cumc.columibia.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/<MinxiuShi>/
+output:
+  html_document:
+    theme: cerulean
