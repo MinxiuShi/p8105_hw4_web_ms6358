@@ -1,0 +1,59 @@
+---
+title: "Plotly"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+## Dataset
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+```
+
+## make the plot 
+
+This plot aims to show the total number of ordered items in each aisle.
+
+```{r}
+data(instacart)
+
+instacart_aisle = 
+  instacart %>%
+  group_by(aisle) %>%
+  summarize(total = n()) %>%
+  arrange(desc(total)) %>%
+  filter(total > 10000) %>%
+  mutate(aisle = fct_reorder(aisle, total)) %>%
+  plot_ly(x = ~aisle, y = ~total, colors = ~aisle, type = "bar", alpha = 0.5)
+
+ggplotly(instacart_aisle)
+```
+This plot aims to show the boxplots of the order hour of day of Pink Lady Apples and Coffee Ice Cream respectively.
+
+```{r}
+instacart_hour = 
+  instacart %>%
+  filter(product_name %in% c("Pink Lady Apples", "Coffee Ice Cream")) %>%
+  group_by(product_name, order_dow) %>%
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "viridis")
+
+ggplotly(instacart_hour)
+```
+
+This histogram aims to show the relationship between order hour and the day of Pink Lady Apples and Coffee Ice Cream respectively.
+
+```{r}
+instacart_day = 
+  instacart %>%
+  filter(product_name %in% c("Pink Lady Apples", "Coffee Ice Cream")) %>%
+  group_by(product_name, order_dow) %>%
+  plot_ly(x = ~order_hour_of_day, y = ~order_dow, color = ~product_name, type = "histogram")
+
+ggplotly(instacart_day)
+```
