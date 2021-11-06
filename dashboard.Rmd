@@ -1,0 +1,64 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+data(instacart)
+
+instacart_aisle = 
+  instacart %>%
+  group_by(aisle) %>%
+  summarize(total = n()) %>%
+  arrange(desc(total)) %>%
+  filter(total > 10000) %>%
+  mutate(aisle = fct_reorder(aisle, total)) %>%
+  plot_ly(x = ~aisle, y = ~total, colors = ~aisle, type = "bar", alpha = 0.5)
+
+ggplotly(instacart_aisle)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart_hour = 
+  instacart %>%
+  filter(product_name %in% c("Pink Lady Apples", "Coffee Ice Cream")) %>%
+  group_by(product_name, order_dow) %>%
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box", colors = "viridis")
+
+ggplotly(instacart_hour)
+```
+
+### Chart C
+
+```{r}
+instacart_day = 
+  instacart %>%
+  filter(product_name %in% c("Pink Lady Apples", "Coffee Ice Cream")) %>%
+  group_by(product_name, order_dow) %>%
+  plot_ly(x = ~order_hour_of_day, y = ~order_dow, color = ~product_name, type = "histogram")
+
+ggplotly(instacart_day)
+```
+
